@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-        @foreach($listaUsuarios as $usuario)
+        @foreach($listaUsuarios as $usuario) <!--traz o método de acordo com o model-->
             <tr>
                 <th scope="row">{{ $usuario->id }}</th>
                 <td>{{ $usuario->nome }}</td>

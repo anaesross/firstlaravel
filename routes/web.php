@@ -26,3 +26,4 @@ Route::get('/', function () { // o primeiro parâmetro é o que o usuário digit
 
 Route::get('/home', 'HomeController@viewHome');// informando o controller e o nome do método(get) criado para ser executado. O @ executa o método dentro do controller
 
+Route::get('/cidade', 'CidadeController@viewCidade');
