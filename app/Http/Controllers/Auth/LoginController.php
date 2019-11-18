@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth; // namespace está dizendo o local onde o arquivo está localizado 
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller; // mesmo sistema que o include, está incluindo o diretório seguinte
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

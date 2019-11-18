@@ -19,7 +19,10 @@ Route::get('/', function () { // o primeiro parâmetro é o que o usuário digit
     return view('welcome'); //view função global
 });
 
-Route::get('/home', function(){ //function() = função anônima
+/* Route::get('/home', function(){ //function() = função anônima
     //o método(get) chama a classe(route)- class nao precisa ser criada nesse caso
     echo "Hello World!";
-});
+}); */
+
+Route::get('/home', 'HomeController@viewHome');// informando o controller e o nome do método(get) criado para ser executado. O @ executa o método dentro do controller
+
