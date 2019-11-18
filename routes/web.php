@@ -16,9 +16,10 @@
 // $route-> get();
 
 Route::get('/', function () { // o primeiro parâmetro é o que o usuário digita, o segundo é uma função anônima. Nesse caso retorna a view.
-    return view('welcome');
+    return view('welcome'); //view função global
 });
 
-Route::get('/home', function(){
+Route::get('/home', function(){ //function() = função anônima
+    //o método(get) chama a classe(route)- class nao precisa ser criada nesse caso
     echo "Hello World!";
 });
