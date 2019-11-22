@@ -21,5 +21,20 @@ class HomeController extends Controller
        return view('Home', ["listaUsuarios"=>$listaUsuarios]); //criar um array e atribuir a lista de usuarios, isso faz
        //com que ele mostre na view as lista dos usuarios cadastrados
     }
+    //exemplo de rotas parametrizadas, quando voce passa parametros na url
+    public function request(Request $request, $id=0){ //$id é o parametro passado na route para puxar o id na url
+        //dd($id); //var_dump e exit  // id=0 caso nao passem um valor para o parametro ele nao da erro , deixa como padrao o valor zero
+        if($id == 0){
+            echo "passe algum valor de id";
+        }
+    }
+    public function exibirFormulario(){
+        return view('formulario');
+    }
+
+    public function cadastrarFormulario(Request $request){
+        dd($request->nome);
+    }
+    
 }
 

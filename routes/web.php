@@ -26,4 +26,14 @@ Route::get('/', function () { // o primeiro parâmetro é o que o usuário digit
 
 Route::get('/home', 'HomeController@viewHome');// informando o controller e o nome do método(get) criado para ser executado. O @ executa o método dentro do controller
 
+//Route::get('/request/id/{id}', 'HomeController@request');//classe request já existe no laravel, puxa todas as informações do request q solicitar dentro do controll
+Route::get('/request/id/{id?}', 'HomeController@request');//? = parametro opcional, posso informar o id ou não
+
+
 Route::get('/cidade', 'CidadeController@viewCidade');
+
+
+//rota parametrizada = quando a rota recebe parametros por ex: ?id=1 ou /id/1
+
+Route::get('/formulario', 'HomeController@exibirFormulario');
+Route::post('/formulario', 'HomeController@cadastrarFormulario');
